@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 ARG VITE_API_URL=""
 ENV VITE_API_URL=$VITE_API_URL
-RUN npm run build
+RUN npm run dev
 
 # ── Stage 2: Serve with Nginx ─────────────────────────────────────────────────
 FROM nginx:alpine AS runtime
