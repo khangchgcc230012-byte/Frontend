@@ -42,12 +42,12 @@ function CreateForm({ onCreated }) {
 
   // Change this in both components:
   const copy = (text) => {
-    // Combine Backend URL + Redirection Path + Short Code
-    const fullRedirectUrl = `https://backend-8bxo.onrender.com/api/URLs/go/${text}`;
-    
-    navigator.clipboard.writeText(fullRedirectUrl);
-    toast.success('Full link copied to clipboard!');
-  }
+  // This creates the full link that a browser can actually follow
+  const fullLink = `https://backend-8bxo.onrender.com/api/URLs/go/${text}`;
+  
+  navigator.clipboard.writeText(fullLink);
+  toast.success('Full redirect link copied!');
+  };
 
   return (
     <div className={styles.card}>
