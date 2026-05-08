@@ -1,28 +1,39 @@
+/* Import custom fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
 
+/* CSS variables (custom properties) for color scheme and spacing */
 :root {
+  /* Background colors - dark theme */
   --bg: #0a0a0f;
   --bg2: #111118;
   --bg3: #1a1a26;
+  /* Border colors */
   --border: #2a2a3d;
   --border-glow: #5b4fff44;
+  /* Primary accent colors */
   --accent: #5b4fff;
   --accent2: #ff4f9b;
   --accent-dim: #5b4fff22;
+  /* Text colors - from light to dark */
   --text: #f0eeff;
   --text2: #9896b8;
   --text3: #5f5d7e;
+  /* Status colors */
   --success: #00e5a0;
   --error: #ff4f6b;
   --warn: #ffc842;
+  /* Border radius for rounded corners */
   --radius: 12px;
   --radius-sm: 6px;
 }
 
+/* Reset default margins and padding, use border-box for all elements */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Smooth scrolling behavior */
 html { scroll-behavior: smooth; }
 
+/* Body styles - apply dark theme and typography */
 body {
   font-family: 'Syne', sans-serif;
   background: var(--bg);
@@ -32,11 +43,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background grid */
+/* Decorative grid background pattern */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
+  /* Create a grid pattern with horizontal and vertical lines */
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -46,15 +58,17 @@ body::before {
   z-index: 0;
 }
 
+/* Root element positioning to appear above the grid background */
 #root { position: relative; z-index: 1; }
 
-/* Scrollbar */
+/* Custom scrollbar styling for webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* Selection */
+/* Text selection styling */
 ::selection { background: var(--accent); color: white; }
 
+/* Monospace font class for code or technical text */
 .mono { font-family: 'DM Mono', monospace; }

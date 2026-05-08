@@ -1,10 +1,12 @@
 /* ── Layout ── */
+/* Main app container - full viewport height with flexbox layout */
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Main content container - centered with max width and spacing */
 .main {
   max-width: 1100px;
   margin: 0 auto;
@@ -16,6 +18,7 @@
 }
 
 /* ── Header ── */
+/* Top navigation header - sticky position and blur effect */
 .header {
   display: flex;
   align-items: center;
@@ -29,6 +32,7 @@
   background: rgba(10,10,15,0.85);
 }
 
+/* Logo styling - brand name with icon */
 .logo {
   font-size: 22px;
   font-weight: 800;
@@ -37,9 +41,12 @@
   align-items: center;
   gap: 10px;
 }
+/* Accent color for the ".io" part of the logo */
 .logo em { color: var(--accent); font-style: normal; }
+/* Logo icon styling */
 .logoIcon { color: var(--accent); }
 
+/* Header stats display - monospace font for technical look */
 .headerStats {
   font-size: 13px;
   color: var(--text3);
@@ -47,6 +54,7 @@
 }
 
 /* ── Hero ── */
+/* Hero section with large title and description */
 .hero {
   max-width: 1100px;
   margin: 0 auto;
@@ -54,6 +62,7 @@
   width: 100%;
 }
 
+/* Badge/pill styling for hero section */
 .heroBadge {
   display: inline-flex;
   align-items: center;
@@ -70,6 +79,7 @@
   text-transform: uppercase;
 }
 
+/* Large responsive hero title */
 .heroTitle {
   font-size: clamp(42px, 7vw, 80px);
   font-weight: 800;
@@ -78,6 +88,7 @@
   margin-bottom: 20px;
 }
 
+/* Gradient text effect for accent words */
 .gradient {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
   -webkit-background-clip: text;
@@ -85,6 +96,7 @@
   background-clip: text;
 }
 
+/* Hero subtitle text */
 .heroSub {
   font-size: 17px;
   color: var(--text2);
@@ -94,6 +106,7 @@
 }
 
 /* ── Card ── */
+/* Card container - used for forms and content sections */
 .card {
   background: var(--bg2);
   border: 1px solid var(--border);
